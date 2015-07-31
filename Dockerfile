@@ -15,5 +15,7 @@ COPY wp /usr/local/bin/
 ADD https://github.com/wp-cli/wp-cli/releases/download/v0.19.2/wp-cli-0.19.2.phar /usr/local/bin/wp-cli
 RUN chmod +x /usr/local/bin/wp-cli
 
+USER www-data
+
 ENTRYPOINT []
 CMD ["--help"]
